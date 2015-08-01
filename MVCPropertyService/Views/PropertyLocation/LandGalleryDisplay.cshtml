@@ -1,0 +1,35 @@
+﻿@model MVCPropertyService.Models.GalleryDetails
+
+@{
+  Layout = "~/Views/Shared/_PropertyGallery.cshtml";
+}
+
+
+<div class="slider">
+  @foreach (var item in Model.DisplayLandGallery)
+  {
+        <!--show the first image by default on page load by checked-->
+    <input type="radio" name="slide_switch" id="@item.OrderId" checked="checked" />
+    <label for="@item.OrderId">
+      <img src="@Url.Content(@item.Photo)" alt="@item.AlternateText" width="100" />
+    </label>
+    <img src="@Url.Content(@item.Photo)" alt="@item.AlternateText" />
+  }
+
+
+</div>
+
+<div style="float:right">
+  @foreach(var item in Model.DisplayLandDetails)
+  {
+    <ul>
+      <li>@item.PropertyId</li>
+      <li>@item.Parish_Or_State</li>
+      <li>@item.PropertyName</li>
+      <li>@item.AddressLine</li>
+      <li>@item.Country</li>
+      <li>@item.Acres</li>
+      <li>@item.AskingPrice</li>
+    </ul>
+  }
+</div>

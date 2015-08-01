@@ -1,0 +1,132 @@
+﻿@model MVCPropertyService.Models.GalleryDetails
+
+@{
+  Layout = "~/Views/Shared/_PropertyGallery.cshtml";
+  ViewData["Action"] = "Portland";
+  
+}
+
+<div class="gallery-container">
+  <div class="heading-position">
+    @foreach (var item in Model.DisplayHouseDetails)
+    {
+      <p>@item.AddressLine, @item.Country</p>
+    }
+  </div>
+
+
+  <div class="slider">
+    @foreach (var item in Model.DisplayHouseGallery)
+    {
+        <!--show the first image by default on page load by checked-->
+      <input type="radio" name="slide_switch" id="@item.OrderId" checked="checked" />
+      <label for="@item.OrderId">
+        <img src="@Url.Content(@item.Photo)" alt="@item.AlternateText" width="100" class="img-responsive" />
+      </label>
+      <img src="@Url.Content(@item.Photo)" alt="@item.AlternateText" class="img-responsive" />
+    }
+  </div>
+
+
+  <div class="position-details">
+
+    @foreach (var item in Model.DisplayHouseDetails)
+    {
+      <table class="table-striped DetailsTable">
+        <tr class="">
+          <th>Property ID  :</th>
+          <td>@item.PropertyId</td>
+        </tr>
+        <tr class="">
+          <th>Location  :</th>
+          <td>@item.AddressLine</td>
+        </tr>
+        <tr class="">
+          <th>Parish/State  :</th>
+          <td>@item.Parish_Or_State</td>
+        </tr>
+        <tr class="brightGreen">
+          <th>Country Of Location  :</th>
+          <td>@item.Country</td>
+        </tr>
+        <tr class="lightGreen">
+          <th>View Location :</th>
+          <td>@item.ViewSpot</td>
+        </tr>
+        <tr class="">
+          <th>No.Of Rooms  :</th>
+          <td>@item.No_Of_Rooms</td>
+        </tr>
+        <tr class="">
+          <th>No. Of Bedrooms  :</th>
+          <td>@item.No_Of_Bedrooms</td>
+        </tr>
+        <tr class="">
+          <th>Number Of Kitchens  :</th>
+          <td>@item.No_Of_Kitchen</td>
+        </tr>
+        <tr class="">
+          <th>Number Of Livingrooms  :</th>
+          <td>@item.No_Of_Livingrooms</td>
+        </tr>
+        <tr class="brightGreen">
+          <th>Asking Price :</th>
+          <td>@item.AskingPrice</td>
+        </tr>
+      </table>
+    }
+  </div>
+
+  <div class="mailing-form">
+    @using (Html.BeginForm("GetEmailForm", "Emailing"))
+    {
+      @Html.AntiForgeryToken()
+      <h4>Logo Goes here.</h4>
+      <h4>Contact Us For Inquiries</h4>
+      <h5>Tel: 1876 888 8888</h5>
+      <h5>Email: something@propertyfindingservice.com</h5>
+      <hr />
+  <form role="form">
+    <div class=" form-group">
+      @Html.LabelFor(m => m.DisplayEmailForm.Name, new { @class = "col-md-2 control-label" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.DisplayEmailForm.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DisplayEmailForm.Name)
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(m => m.DisplayEmailForm.FromContactPhoneNumber, new { @class = "col-md-2 control-label" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.DisplayEmailForm.FromContactPhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DisplayEmailForm.FromContactPhoneNumber)
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(m => m.DisplayEmailForm.Address, new { @class = "col-md-2 control-label" })
+      <div class="col-md-10">
+        @Html.TextBoxFor(m => m.DisplayEmailForm.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DisplayEmailForm.Address)
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(m => m.DisplayEmailForm.MessageBody, new { @class = "col-md-2 control-label" })
+      <div class="col-md-10">
+        @Html.TextAreaFor(m => m.DisplayEmailForm.MessageBody, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DisplayEmailForm.MessageBody)
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" class="btn btn-default" value="Send" />
+      </div>
+    </div>
+  </form>
+    }
+  </div>
+
+</div>
+
+
+
+
+

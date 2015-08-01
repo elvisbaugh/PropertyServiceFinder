@@ -1,0 +1,173 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <link href="~/Content/Site.css" rel="stylesheet" />
+  <link href="~/Content/index_display_image.css" rel="stylesheet" />
+ 
+  <title>@ViewBag.Title</title>
+</head>
+
+<body>
+  <div class="main-container">
+      <div class="nav">
+        <div class="container">
+          <ul class="menu">
+            <li class="nav-land-border">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li class="nav-land-border">
+              <a href="#">Properties<span class="caret"></span></a><ul>
+                <li>
+                  @Html.ActionLink("Portland", "Portland", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St James", "StJames", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Ann", "StAnn", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("Manchester", "Manchester", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Mary", "StMary", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("Westmoreland", "Westmoreland", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Andrew", "StAndrew", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Thomas", "StThomas", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("Trelawny", "Trelawny", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("Clarendon", "Clarendon", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Catherine", "StCatherine", "PropertyLocation")
+                </li>
+                <li>
+                  @Html.ActionLink("St Elizabeth", "StElizabeth", "PropertyLocation")
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-land-border">@Html.ActionLink("Services", "Services", "Home")</li>
+            <li class="nav-land-border">@Html.ActionLink("About", "About", "Home")</li>
+            <li class="nav-land-border">@Html.ActionLink("Contact", "Contact", "Home")</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="option-button">
+        <ul class="cb-slideshow">
+          <li>
+            <span>Image 01</span>
+          </li>
+          <li>
+            <span> Image 02</span>
+          </li>
+          <li>
+            <span> Image 03</span>
+          </li>
+          <li>
+            <span> Image 04</span>
+          </li>
+          <li>
+            <span> Image 05</span>
+          </li>
+          <li>
+            <span> Image 06</span>
+          </li>
+        </ul>
+
+        <h1>Looking For </h1>
+        <button type="button" class="btn btn-success btn-lg" id="House">Houses</button>
+        <h2> Or </h2>
+        <button type="button" class="btn btn-success btn-lg" id="Land">Lands</button>
+
+
+      </div>
+
+
+      <div class="Properties-land-locations" id="propertyType">
+        <h2>@ViewBag.Title Properties</h2>
+        <div class="paragraphStyle">
+          <p>
+            <br />
+            @ViewBag.FirstParagraph
+          </p>
+          <br />
+          <p>
+            @ViewBag.SecondParagraph
+          </p>
+        </div>
+
+        <div class="container">
+
+            <div id="displayMyImages"></div>
+
+
+            @RenderBody();
+
+          </div>
+        </div>
+      
+
+     
+      
+    <div class="realestate-footer">
+      <div class="container">
+        
+        
+          <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div class="contact-info">
+                <h2>King`s Property Finding Service</h2>
+                <p>Email Address: kings@gmail.com</p>
+                <p>Telephone    : + 1876 444 - 4444</p>
+              </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div class="navigation">
+                <h2>Navigation</h2>
+                <ul>
+                  <li><a href="#">Home</a>
+                  <li></li>
+                  <li><a href="#">Properties</a></li>
+                </ul>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <div class="follow-us">
+                <h2>Follow Us On</h2>
+                <a href="#"><img src="~/Images/social_media_logos/fb1.png"></a>
+                <a href="#"><img src="~/Images/social_media_logos/twitter1.png"></a>
+                <a href="#"><img src="~/Images/social_media_logos/pinterest1.png"></a>
+                <a href="#"><img src="~/Images/social_media_logos/linkedin1.png"></a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="land-sale-footer">
+      <p>&copy 2015 King`s Property Finding Service. All rights reserved</p>
+    </div>
+    </div>
+  <script src="~/Content/Javascript/ToggleLandAndHome.js"></script>
+  <script src="~/Content/Javascript/LoadDetails.js"></script>
+</body>
+</html>

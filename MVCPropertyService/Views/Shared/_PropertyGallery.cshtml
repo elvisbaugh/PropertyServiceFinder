@@ -1,0 +1,147 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <link href="~/Content/Site.css" rel="stylesheet" />
+  <link href="~/Content/index_display_image.css" rel="stylesheet" />
+  <link href="~/Content/gallery.css" rel="stylesheet" />
+
+  <title>@ViewBag.Title</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="nav">
+      <div class="container">
+        <ul class="menu">
+          <li class="nav-land-border">@Html.ActionLink("Home", "Index", "Home")</li>
+          <li class="nav-land-border"><a href="#">Properties<span class="caret"></span></a><ul><li>
+            @Html.ActionLink("Portland", "Portland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St James", "StJames", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Ann", "StAnn", "PropertyLocation")</li><li>
+                @Html.ActionLink("Manchester", "Manchester", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Mary", "StMary", "PropertyLocation")</li><li>
+                @Html.ActionLink("Westmoreland", "Westmoreland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Andrew", "StAndrew", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Thomas", "StThomas", "PropertyLocation")</li><li>
+                @Html.ActionLink("Trelawny", "Trelawny", "PropertyLocation")</li><li>
+                @Html.ActionLink("Clarendon", "Clarendon", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Catherine", "StCatherine", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Elizabeth", "StElizabeth", "PropertyLocation")</li></ul></li>
+
+          <li class="nav-land-border">@Html.ActionLink("Services", "Services", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("About", "About", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="option-button">
+      <ul class="cb-slideshow">
+        <li>
+          <span>Image 01</span>
+        </li>
+        <li>
+          <span> Image 02</span>
+        </li>
+        <li>
+          <span> Image 03</span>
+        </li>
+        <li>
+          <span> Image 04</span>
+        </li>
+        <li>
+          <span> Image 05</span>
+        </li>
+        <li>
+          <span> Image 06</span>
+        </li>
+      </ul>
+
+      <h1>Looking For </h1>
+      <button type="button" class="btn btn-success btn-lg" id="HomeProperty">Home</button>
+    </div>
+
+
+    <div class="gallery-locations">
+      <div class="row">
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <button type="button" class="btn btn-primary btn-lg" id="back-button">BACK</button>
+        </div>
+        <div class="social-icons col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <a href="#"><img src="~/Images/social_media_logos/facebook-icon.png" /></a>
+          <a href="#"><img src="~/Images/social_media_logos/twitter-icon.png" /></a>
+          <a href="#"><img src="~/Images/social_media_logos/pinterests.png" /></a>
+         <a href="#"><img src="~/Images/social_media_logos/linkedin-icon.png" /></a>
+        </div>
+      </div>
+    
+      
+      <div class="container">
+        <div class="row">
+
+
+          @RenderBody()
+          <div class="promote-section">
+            <h3>Advertise Your Properties</h3>
+            <h1>Free Of Charge</h1>
+            <p>for a dhd hlhhj aadhgd dkjs, fjhfhso. syyosajama mddbaa ddjgaal  ndshh</p>
+          </div>
+        </div>
+      </div>
+     
+       
+      
+    </div>
+
+
+
+    <div class="realestate-footer">
+      <div class="container">
+
+
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class"contact-info">
+              <h2>King`s Property Finding Service</h2>
+              <p>Email Address: kings@gmail.com</p>
+              <p>Telephone    : + 1876 444 - 4444</p>
+            </div>
+          </div>
+          <div class="navigation col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h2>Navigation</h2>
+            <ul>
+              <li><a href="#">Home</a>
+              <li></li>
+              <li><a href="#">Properties</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+          </div>
+          <div class="follow-us col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h2>Follow Us On</h2>
+            <a href="#"><img src="~/Images/social_media_logos/fb1.png"></a>
+            <a href="#"><img src="~/Images/social_media_logos/twitter1.png"></a>
+            <a href="#"><img src="~/Images/social_media_logos/pinterest1.png"></a>
+            <a href="#"><img src="~/Images/social_media_logos/linkedin1.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="land-sale-footer">
+      <p>&copy 2015 King`s Property Finding Service. All rights reserved</p>
+    </div>
+  </div>
+  
+</body>
+</html>

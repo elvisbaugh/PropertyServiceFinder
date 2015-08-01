@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MVCPropertyService.Models.House>
+
+
+@foreach (var item in Model)
+{
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div class="view-layout">
+      <img src="@Url.Content(item.IndexImage)" alt="@item.PropertyName"/>
+      <div>
+        <table class="hoverTable">                 
+          <tr class="brightGreen">
+            <th>Number of Acres  :</th>
+            <td>@item.No_Of_Rooms</td>
+          </tr>
+          <tr class="lightGreen">
+            <th>View Location :</th>
+            <td>@item.ViewSpot</td>
+          </tr>
+          <tr class="brightGreen">
+            <th>Asking Price :</th>
+            <td>@item.AskingPrice</td>
+          </tr>
+        </table>
+        
+        <button type="button" class="btn btn-success btn-lg details" id="houseDetails">
+
+          @Html.ActionLink("Details", "HouseGalleryDisplay", new { @id = item.PropertyId })
+        </button>
+        
+      </div>
+    </div>
+  </div>
+}
+
