@@ -1,0 +1,5 @@
+C:\Users\max\Documents\Visual Studio 2013\Projects\MVCPropertyService\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\max\Documents\Visual Studio 2013\Projects\MVCPropertyService\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\max\Documents\Visual Studio 2013\Projects\MVCPropertyService\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\max\Documents\Visual Studio 2013\Projects\MVCPropertyService\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\max\Documents\Visual Studio 2013\Projects\MVCPropertyService\BusinessLayer\obj\Debug\BusinessLayer.pdb

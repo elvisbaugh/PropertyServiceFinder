@@ -1,0 +1,345 @@
+﻿html, body {
+      padding: 0px;
+      margin: 0px;
+      border: 0px;
+      
+    }
+
+.main-container {
+	width: 90%;
+	padding: 0px;
+	margin: -17px auto 10px auto;
+	background-color: #efefef;
+	
+}
+
+.slider {
+	position: relative;
+	height: 500px;
+	margin-top: 59px;
+	border-top: 20px #dbdbdb;
+	overflow: hidden;
+
+}
+
+
+.slider .container{
+	position: relative;
+	top: 100px;
+	bottom: 100px;
+
+}
+
+
+.main-slide {
+	background-image: url('jamaica_green_grass.jpg');
+	height: 500px;
+	background-size: cover;
+}
+
+.second-slide {
+	background-image: url('beach_landscape.jpg');
+	background-size: cover;
+	height: 500px;
+}
+
+.third-slide {
+	background-image: url('green_grass.jpg');
+	background-size: cover;
+	height: 500px;
+}
+
+.slider h1 {
+	color: #fff;
+	font-size: 48px;
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+
+}
+
+.slider p {
+	color: #fff;
+	font-family: 'Shift', sans-serif;
+	font-weight:lighter;
+}
+
+/*going to delete this*/
+.nav li {
+
+	display: inline;
+
+
+}
+
+.nav a{
+	padding: 3px 30px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+
+}
+/*Banner styling here*/
+.nav {
+	position: fixed;
+	border-top: 2px solid #efefef;
+	border-bottom: 6px solid #efefef;
+	top: 0px;
+	background-color: #efefef;
+	box-shadow: 0px 10px 5px #888888;
+	-webkit-box-shadow:0px 10px 5px #888888;
+	-moz-box-shadow:0px 10px 5px #888888;
+	width: 90%;
+  height:10%;
+	z-index: 1;
+
+
+}
+/*Submenu Styling*/
+.nav li ul {
+   display: none; 
+   width: 10em; /* Width to help Opera out */
+   
+}
+
+.nav li:hover ul, .nav li ul:hover {
+   display:block;
+   position: absolute;
+   margin: 0px;
+   padding: 0px; 
+   left: 28.3em;
+   top: 37px;
+   width: 12em;
+  background-color: rgba(209, 228, 255, 0.8);
+ -moz-border-radius-topleft: 31px;
+-moz-border-radius-topright:31px;
+-moz-border-radius-bottomleft:31px;
+-moz-border-radius-bottomright:31px;
+-webkit-border-top-left-radius:31px;
+-webkit-border-top-right-radius:31px;
+-webkit-border-bottom-left-radius:31px;
+-webkit-border-bottom-right-radius:31px;
+border-top-left-radius:31px;
+border-top-right-radius:31px;
+border-bottom-left-radius:31px;
+border-bottom-right-radius:31px;
+}
+
+.nav li ul a{
+	font-size: 0.9em;
+	font-weight: normal;
+	border-top: 1px solid;
+	background-size: 100%;
+}
+
+.menu {
+	text-align: center;
+  padding-top:15px;
+   
+}
+/*horizontal navbars border control*/
+ul .nav-land-border{
+	height: 50px;
+    width: 40px;
+   -moz-border-radius-topleft: 31px;
+-moz-border-radius-topright:31px;
+-moz-border-radius-bottomleft:31px;
+-moz-border-radius-bottomright:31px;
+-webkit-border-top-left-radius:31px;
+-webkit-border-top-right-radius:31px;
+-webkit-border-bottom-left-radius:31px;
+-webkit-border-bottom-right-radius:31px;
+border-top-left-radius:31px;
+border-top-right-radius:31px;
+border-bottom-left-radius:31px;
+border-bottom-right-radius:31px;
+    border:solid 1px forestgreen;
+    background-color: white;
+    display: inline;
+    padding: 5px;
+    text-shadow:5px 5px 15px #888;
+   
+}
+ul .nav-land-border a{
+  color:forestgreen;
+  font-weight: bold;
+}
+
+ul .nav-land-border:hover{
+	
+  background-color:forestgreen;
+  
+}
+ul .nav-land-border a:hover{
+  color:white;
+}
+
+
+/*.nav li ul {
+	display: none; 
+	width: 10em; 
+	/*background-color: #69f;*/
+
+
+.Realestate-land-locations {
+	background-color: #efefef;
+	border-bottom: 1px solid #dbdbdb;
+
+}
+
+.Realestate-land-locations h2 {
+	color: #393c3d;
+	font-size: 24px;
+}
+
+.Realestate-land-locations p {
+	font-size: 15px;
+	margin-bottom: 13px;
+}
+
+.realestate-footer {
+	background-color: #F0F5F5;
+  position:relative;
+  padding-top: 1em;
+  top:20px;
+}
+.realestate-footer .container h1{
+	font-size: 1.4em;
+	font-family: 'Shift', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+.realestate-footer .container h2 {
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+.realestate-footer .container li {
+	display: inline;
+
+}
+ .realestate-footer .container a {
+ 	position: relative;
+ 	right: 36px;
+ 	padding-left: 20px;
+ 	text-transform: uppercase;
+ 	text-decoration: none;
+ 	text-align: center;
+ 	margin-left: 0px;
+ 	font-weight: bold;
+ 	font-size: 11px;
+ }
+
+ 
+
+.realestate-footer .container .navigation {
+	position: relative;
+	left: 5px;
+	text-align: center;
+	}
+
+
+.follow-us img {
+	max-height:33px;
+  max-width:33px;
+	position:relative;
+	left: 107px;
+}
+
+
+/*.follow-us img:hover, .follow-us img:active {
+	height: 50px;
+	width: 50px;
+}*/
+
+.follow-us h2 {
+	position: relative;
+	left: 90px;
+
+}
+
+.land-sale-footer p {
+	text-align: center;
+	font-size: 10px;
+	padding: 10px;
+	color: #fff;
+
+}
+
+.land-sale-footer {
+	background-color: #383838;
+  position:relative;
+  top:10px;
+}
+
+
+/*Hover Styling Begins Here !!!*/
+
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+   /*background: #fff url(../images/bgimg.jpg) no-repeat center center;*/
+}
+.view .mask,.view .content {
+   width: 300px;
+   height: 200px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 20px 0 0 0;
+}
+.view p {
+   font-family: Georgia, serif;
+   font-style:italic;
+   font-size: 14px;
+   position: relative;
+   color: #000;
+   padding: 10px 35px 20px;
+   text-align: center;
+}
+.view a.info {
+	position: relative;
+	bottom: 25px;
+	font-size: 13px;
+   display: inline-block;
+   text-decoration: none;
+   padding: 1px 5px;
+   background: #000;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info:hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}

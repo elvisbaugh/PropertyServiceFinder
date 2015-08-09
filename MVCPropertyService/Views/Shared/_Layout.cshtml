@@ -1,0 +1,230 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Property Finder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="~/Content/Javascript/Js-Image-Slider.js"></script>
+  <script src="~/Content/Javascript/App.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href="~/Content/Js-Image_Slider.css" rel="stylesheet" />
+  <link href="~/Content/PropertySaleHoverTransitions.css" rel="stylesheet" />
+  <link href="~/Content/Site.css" rel="stylesheet" />
+
+</head>
+<body>
+  @RenderBody()
+  <div class="main-container">
+
+    <div class="nav">
+      <div class="container">
+        <ul class="menu">
+          <li class="nav-land-border">@Html.ActionLink("Home", "Index", "Home")</li>
+          <li class="nav-land-border"><a href="#">Properties<span class="caret"></span></a><ul><li>
+           @Html.ActionLink("Portland", "Portland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St James", "StJames", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Ann", "StAnn", "PropertyLocation")</li><li>
+                @Html.ActionLink("Manchester", "Manchester", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Mary", "StMary", "PropertyLocation")</li><li>
+                @Html.ActionLink("Westmoreland", "Westmoreland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Andrew", "StAndrew", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Thomas", "StThomas", "PropertyLocation")</li><li>
+                @Html.ActionLink("Trelawny", "Trelawny", "PropertyLocation")</li><li>
+                @Html.ActionLink("Clarendon", "Clarendon", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Catherine", "StCatherine", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Elizabeth", "StElizabeth", "PropertyLocation")</li></ul></li>
+
+          <li class="nav-land-border">@Html.ActionLink("Services", "Services", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("About", "About", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--<div class="jumbotron">-->
+    <div id="sliderFrame">
+      <div id="slider">
+        <a href="#">
+          <img src="~/Images/slider_images/slide_1.jpg" alt="Finding The Perfect Property" />
+        </a>
+
+        <a class="video" href="#">
+          <img src="~/Images/slider_images/slide_2.jpg" alt="Finding You The Right Home" />
+        </a>
+        <a class="video" href="#">
+          <img src="~/Images/slider_images/slide_3.jpg" alt="Advertise Your Sales With Us" />
+        </a>
+        <a class="video" href="#">
+          <img src="~/Images/slider_images/slide_4.jpg" alt="Properties All Across Jamaica" />
+        </a>
+        <!--<a class="lazyImage" href="images/image-slider-4.jpg">Slide 4</a>
+        <a class="video" href="http://vimeo.com/18867695" data-autovideo="1">
+            <b data-src="images/image-slider-5.jpg">Slide 5</b>
+        </a>-->
+      </div>
+    </div>
+
+
+    <div class="Realestate-land-locations">
+      <div class="container">
+        <h2>Featured Locations</h2>
+        <p>Not sure where to choose? We are able to find locations in all parishes of Jamaica.</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_james.jpg" />
+              <div class="mask">
+                <h2>MONTEGO BAY</h2>
+                <p>Second largest city in Jamaica by area and the fourth by population. A tourist destination with several beaches. Back by low mountains.</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/portland.jpg" />
+              <div class="mask">
+                <h2>PORT ANTONIO</h2>
+                <p>Located on the northeastern coast of Jamaica, about 60 miles (100 km) from Kingston. A beautiful haven of beaches and mountains...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_andrew.jpg" />
+              <div class="mask">
+                <h2>HALF WAY TREE</h2>
+                <p>Situated in the southeast of Jamaica, and stretches into the Blue Mountains. Having the highest population of all the parishes...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/westmoreland.jpg" />
+              <div class="mask">
+                <h2>SAVANNA-LA-MAR</h2>
+                <p>Located on the south side of the island. It`s major town Negril, a famous tourist destination, is also situated in the parish...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/clarendon.jpg" />
+              <div class="mask">
+                <h2>MAY PEN</h2>
+                <p>May Pen is well located from an administrative point of view in the centre of a largely agricultural parish.... </p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_ann.jpg" />
+              <div class="mask">
+                <h2>ST ANN`S BAY</h2>
+                <p>Often called 'the Garden Parish of Jamaica' on account of its natural beauty, and birthplace of reggae singers Burning Spear, Bob Marley...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_elizabeth.jpg" />
+              <div class="mask">
+                <h2>BLACK RIVER</h2>
+                <p>Located in the southwest of the island at the mouth of the Black River, longest river on the island and among various tourist destination...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/manchester.jpg" />
+              <div class="mask">
+                <h2>MANDEVILLE</h2>
+                <p>Situated at an elevation of 626 m (2,054 ft).The parish offers a variety of climate, vegetation and scenery locations...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/trelawny.jpg" />
+              <div class="mask">
+                <h2>FALMOUTH</h2>
+                <p>Situated north coast 18 miles east of Montego Bay. It is noted for being one of the Caribbean's best-preserved Georgian towns...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_catherine.jpg" />
+              <div class="mask">
+                <h2>SPANISH TOWN</h2>
+                <p>Is one of the island's largest and most economically valued parishes because of its many resources...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_mary.jpg" />
+              <div class="mask">
+                <h2>PORT MARIA</h2>
+                <p>Located in the northeast section of Jamaica. The terrain is mountainous, rising up to almost 4000 feet at the highest point...</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img src="~/Images/hover_transitions/st_thomas.jpg" />
+              <div class="mask">
+                <h2>MORANT BAY</h2>
+                <p> A very mountainous parish, that include the ranges of the Port Royal Mountains, stretching from above Newcastle in St Andrew,....</p>
+                <a href="#" class="info">View Properties</a>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="realestate-footer">
+      <div class="container">
+
+       <!---- <h1>Have any questions or inquiries?</h1>-->
+          
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class"contact-info">
+                <h2>King`s Property Finding Service</h2>
+                <p>Email Address: kings@gmail.com</p>
+                <p>Telephone    : + 1876 444 - 4444</p>
+              </div>
+            </div>
+            <div class="navigation col-md-4">
+              <h2>Navigation</h2>
+              <ul>
+                <li><a href="#">Home</a>
+                <li></li>
+                <li><a href="#">Properties</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+
+            </div>
+            <div class="follow-us col-md-4">
+              <h2>Follow Us On</h2>
+              <a href="#"><img src="~/Images/social_media_logos/fb1.png"></a>
+              <a href="#"><img src="~/Images/social_media_logos/twitter1.png"></a>
+              <a href="#"><img src="~/Images/social_media_logos/pinterest1.png"></a>
+              <a href="#"><img src="~/Images/social_media_logos/linkedin1.png"></a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="land-sale-footer">
+      <p>&copy 2015 King`s Property Finding Service. All rights reserved</p>
+    </div>
+  </div>
+</body>
+</html>

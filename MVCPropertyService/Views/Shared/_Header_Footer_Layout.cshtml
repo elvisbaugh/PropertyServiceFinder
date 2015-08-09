@@ -1,0 +1,47 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+ 
+  <div class="main-container">
+    <div class="nav">
+      <div class="container">
+        <ul class="menu">
+          <li class="nav-land-border">@Html.ActionLink("Home", "Index", "Home")</li>
+          <li class="nav-land-border"><a href="#">Properties<span class="caret"></span></a><ul><li>
+           @Html.ActionLink("Portland", "Portland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St James", "StJames", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Ann", "StAnn", "PropertyLocation")</li><li>
+                @Html.ActionLink("Manchester", "Manchester", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Mary", "StMary", "PropertyLocation")</li><li>
+                @Html.ActionLink("Westmoreland", "Westmoreland", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Andrew", "StAndrew", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Thomas", "StThomas", "PropertyLocation")</li><li>
+                @Html.ActionLink("Trelawny", "Trelawny", "PropertyLocation")</li><li>
+                @Html.ActionLink("Clarendon", "Clarendon", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Catherine", "StCatherine", "PropertyLocation")</li><li>
+                @Html.ActionLink("St Elizabeth", "StElizabeth", "PropertyLocation")</li></ul></li>
+
+          <li class="nav-land-border">@Html.ActionLink("Services", "Services", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("About", "About", "Home")</li>
+          <li class="nav-land-border">@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  @RenderBody()
+  <div class="land-sale-footer">
+    <p>&copy 2015 King`s Property Finding Service. All rights reserved</p>
+  </div>
+</body>
+</html>
